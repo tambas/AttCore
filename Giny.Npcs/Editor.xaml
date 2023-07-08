@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Giny.Npcs.Editor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Giny.Npcs"
+             mc:Ignorable="d" 
+             d:DesignHeight="730" Width="1282">
+    <Grid>
+        <TextBox  TextChanged="SearchTextChanged" Name="searchText" HorizontalAlignment="Left" Margin="58,10,0,0" TextWrapping="Wrap" Text="" Width="268" Height="23" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search :" VerticalAlignment="Top"/>
+        <ListBox SelectionChanged="NpcSelectionChanged" Name="npcs" HorizontalAlignment="Left" Margin="10,47,0,65" Width="316"/>
+        <ContentControl Name="actionsContent" Margin="343,195,0,37" HorizontalAlignment="Left" Width="929"/>
+        <Canvas Name="editorCanvas" HorizontalAlignment="Left" Height="180" Margin="343,10,0,0" VerticalAlignment="Top" Width="514">
+            <TextBox LostFocus="mapId_LostFocus" x:Name="mapId"  PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192" Canvas.Left="303" Canvas.Top="69"/>
+            <TextBlock  HorizontalAlignment="Left" TextWrapping="Wrap" Text="Map Id :" VerticalAlignment="Top" Canvas.Left="229" Canvas.Top="71"/>
+            <TextBox LostFocus="cellId_LostFocus" x:Name="cellId" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192" Canvas.Left="303" Canvas.Top="101"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cell Id :" VerticalAlignment="Top" Canvas.Left="229" Canvas.Top="103"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Direction :" VerticalAlignment="Top" Canvas.Left="229" Canvas.Top="132"/>
+            <ComboBox LostFocus="direction_LostFocus" x:Name="direction" HorizontalAlignment="Left" VerticalAlignment="Top" Width="192" Canvas.Left="303" Canvas.Top="132"/>
+            <ListBox SelectionChanged="ActionsSelectionChanged" x:Name="actions" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="220" Canvas.Top="60"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Actions :" VerticalAlignment="Top" Canvas.Top="39"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Name : " VerticalAlignment="Top" Canvas.Top="10"/>
+            <Button Content="Remove" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Canvas.Left="109" Canvas.Top="124" Click="RemoveCurrentActionClick"/>
+            <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Click="AddActionClick" Canvas.Top="124"/>
+            <TextBox Name="npcName" LostFocus="npcName_LostFocus"  HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="174" Canvas.Left="46" Canvas.Top="5"/>
+        </Canvas>
+        <Image Name="npcImage" HorizontalAlignment="Left" Height="150" Margin="872,40,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Save i18n" Margin="10,0,956,20" Click="Savei18nClick" Height="34" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</UserControl>

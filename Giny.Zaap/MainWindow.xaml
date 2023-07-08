@@ -1,0 +1,18 @@
+﻿<Window x:Class="Giny.Zaap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Giny.Zaap"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="Giny.Zaap" Height="156.442" Width="375.221">
+    <Grid>
+        <TextBox x:Name="userName" Height="23" Margin="132,16,10,0" TextWrapping="Wrap" Text="admin" VerticalAlignment="Top" RenderTransformOrigin="0.485,0.388" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,17,0,0" TextWrapping="Wrap" Text="Nom de compte :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Text="Mot de passe :" VerticalAlignment="Top"/>
+        <TextBox x:Name="password" Height="23" Margin="132,45,10,0" TextWrapping="Wrap" Text="aa" VerticalAlignment="Top" RenderTransformOrigin="0.485,0.388" />
+        <Button Content="Lancer Dofus" Margin="10,73,10,10" Click="Button_Click"/>
+
+    </Grid>
+</Window>

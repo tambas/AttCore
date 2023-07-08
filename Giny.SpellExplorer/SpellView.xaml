@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Giny.SpellExplorer.SpellView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Giny.SpellExplorer"
+             mc:Ignorable="d" Height="685.354" Width="773">
+    <Grid>
+        <ListBox x:Name="effectsList" Margin="10,0,0,68" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="238" Height="327" VerticalAlignment="Bottom"/>
+
+        <ListBox x:Name="effectInfo" Margin="258,0,25,68" RenderTransformOrigin="-0.312,0.486" Height="468" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="spellInfo" Margin="10,0,25,541" Height="134" VerticalAlignment="Bottom"/>
+        <ListBox x:Name="levelsList" Margin="10,0,0,400" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="238" Height="136" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</UserControl>

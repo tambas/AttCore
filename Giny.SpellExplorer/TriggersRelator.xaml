@@ -1,0 +1,21 @@
+﻿<Window x:Class="Giny.SpellExplorer.TriggersRelator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Giny.SpellExplorer"
+        mc:Ignorable="d"
+        Title="Triggers Relator" Height="454.677" Width="767.256">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="108*"/>
+            <ColumnDefinition Width="145*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="triggers" HorizontalAlignment="Left" Height="336" Margin="10,10,0,0" VerticalAlignment="Top" Width="286"/>
+        <ListBox Name="spells" HorizontalAlignment="Left" Height="336" Margin="310,10,0,0" VerticalAlignment="Top" Width="439" Grid.ColumnSpan="2"/>
+        <ProgressBar Foreground="Goldenrod" Name="progress" HorizontalAlignment="Left" Margin="10,386,0,10" Width="739" Grid.ColumnSpan="2"/>
+        <Button Content="Explore" Margin="310,351,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="27" Click="ExploreClick"/>
+        <CheckBox Name="breedSpells" Click="breedSpells_Click" Content="Breed spells only" HorizontalAlignment="Left" Margin="10,358,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.223,0.357" Width="286"/>
+
+    </Grid>
+</Window>

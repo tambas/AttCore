@@ -1,0 +1,13 @@
+﻿<Window x:Class="Giny.Npcs.AddReply"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Giny.Npcs"
+        mc:Ignorable="d"
+        Title="AddReply" Height="429.38" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ListBox Name="replies" HorizontalAlignment="Left" Height="334" Margin="10,10,0,0" VerticalAlignment="Top" Width="774"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="317,360,0,0" VerticalAlignment="Top" Width="160" Height="30" Click="Button_Click"/>
+    </Grid>
+</Window>

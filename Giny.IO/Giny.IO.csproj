@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{125FA15D-C012-4AF3-8A65-F6A104A67FC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Giny.IO</RootNamespace>
+    <AssemblyName>Giny.IO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=47d7877cb3620160">
+      <HintPath>..\packages\zlib.net.1.0.4.0\lib\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compression\Deflate.cs" />
+    <Compile Include="ClientConstants.cs" />
+    <Compile Include="D2I\D2IFile.cs" />
+    <Compile Include="D2OClasses\Abuse\AbuseReasons.cs" />
+    <Compile Include="D2OClasses\Alignments\AlignmentGift.cs" />
+    <Compile Include="D2OClasses\Alignments\AlignmentOrder.cs" />
+    <Compile Include="D2OClasses\Alignments\AlignmentRank.cs" />
+    <Compile Include="D2OClasses\Alignments\AlignmentRankJntGift.cs" />
+    <Compile Include="D2OClasses\Alignments\AlignmentSide.cs" />
+    <Compile Include="D2OClasses\Alignments\AlignmentTitle.cs" />
+    <Compile Include="D2OClasses\Almanax\AlmanaxCalendar.cs" />
+    <Compile Include="D2OClasses\AmbientSounds\PlaylistSound.cs" />
+    <Compile Include="D2OClasses\Appearance\Appearance.cs" />
+    <Compile Include="D2OClasses\Appearance\CreatureBoneOverride.cs" />
+    <Compile Include="D2OClasses\Appearance\CreatureBoneType.cs" />
+    <Compile Include="D2OClasses\Appearance\Ornament.cs" />
+    <Compile Include="D2OClasses\Appearance\SkinMapping.cs" />
+    <Compile Include="D2OClasses\Appearance\SkinPosition.cs" />
+    <Compile Include="D2OClasses\Appearance\Title.cs" />
+    <Compile Include="D2OClasses\Appearance\TitleCategory.cs" />
+    <Compile Include="D2OClasses\Arena\ArenaLeague.cs" />
+    <Compile Include="D2OClasses\Arena\ArenaLeagueReward.cs" />
+    <Compile Include="D2OClasses\Arena\ArenaLeagueSeason.cs" />
+    <Compile Include="D2OClasses\Bonus\Bonus.cs" />
+    <Compile Include="D2OClasses\Bonus\Criterion\BonusAreaCriterion.cs" />
+    <Compile Include="D2OClasses\Bonus\Criterion\BonusCriterion.cs" />
+    <Compile Include="D2OClasses\Bonus\Criterion\BonusEquippedItemCriterion.cs" />
+    <Compile Include="D2OClasses\Bonus\Criterion\BonusMonsterCriterion.cs" />
+    <Compile Include="D2OClasses\Bonus\Criterion\BonusMonsterFamilyCriterion.cs" />
+    <Compile Include="D2OClasses\Bonus\Criterion\BonusQuestCategoryCriterion.cs" />
+    <Compile Include="D2OClasses\Bonus\Criterion\BonusSubAreaCriterion.cs" />
+    <Compile Include="D2OClasses\Bonus\MonsterBonus.cs" />
+    <Compile Include="D2OClasses\Bonus\MonsterDropChanceBonus.cs" />
+    <Compile Include="D2OClasses\Bonus\MonsterLightBonus.cs" />
+    <Compile Include="D2OClasses\Bonus\MonsterStarRateBonus.cs" />
+    <Compile Include="D2OClasses\Bonus\MonsterXPBonus.cs" />
+    <Compile Include="D2OClasses\Bonus\MountBonus.cs" />
+    <Compile Include="D2OClasses\Bonus\QuestBonus.cs" />
+    <Compile Include="D2OClasses\Bonus\QuestKamasBonus.cs" />
+    <Compile Include="D2OClasses\Bonus\QuestXPBonus.cs" />
+    <Compile Include="D2OClasses\Breach\BreachDungeonModificator.cs" />
+    <Compile Include="D2OClasses\Breach\BreachInfinityLevel.cs" />
+    <Compile Include="D2OClasses\Breach\BreachWorldMapCoordinate.cs" />
+    <Compile Include="D2OClasses\Breach\BreachWorldMapSector.cs" />
+    <Compile Include="D2OClasses\Breeds\Breed.cs" />
+    <Compile Include="D2OClasses\Breeds\BreedRole.cs" />
+    <Compile Include="D2OClasses\Breeds\BreedRoleByBreed.cs" />
+    <Compile Include="D2OClasses\Breeds\Head.cs" />
+    <Compile Include="D2OClasses\Challenges\Challenge.cs" />
+    <Compile Include="D2OClasses\Characteristics\Characteristic.cs" />
+    <Compile Include="D2OClasses\Characteristics\CharacteristicCategory.cs" />
+    <Compile Include="D2OClasses\Communication\CensoredWord.cs" />
+    <Compile Include="D2OClasses\Communication\ChatChannel.cs" />
+    <Compile Include="D2OClasses\Communication\Emoticon.cs" />
+    <Compile Include="D2OClasses\Communication\InfoMessage.cs" />
+    <Compile Include="D2OClasses\Communication\NamingRule.cs" />
+    <Compile Include="D2OClasses\Communication\Smiley.cs" />
+    <Compile Include="D2OClasses\Communication\SmileyCategory.cs" />
+    <Compile Include="D2OClasses\Communication\SmileyPack.cs" />
+    <Compile Include="D2OClasses\Documents\Document.cs" />
+    <Compile Include="D2OClasses\Effects\Effect.cs" />
+    <Compile Include="D2OClasses\Effects\EffectInstance.cs" />
+    <Compile Include="D2OClasses\Effects\EvolutiveEffect.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceCreature.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceDate.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceDice.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceDuration.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceInteger.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceLadder.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceMinMax.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceMount.cs" />
+    <Compile Include="D2OClasses\Effects\Instances\EffectInstanceString.cs" />
+    <Compile Include="D2OClasses\Externalnotifications\ExternalNotification.cs" />
+    <Compile Include="D2OClasses\Feature\Criterion\GroupFeatureCriterion.cs" />
+    <Compile Include="D2OClasses\Feature\OptionalFeature.cs" />
+    <Compile Include="D2OClasses\Guild\EmblemBackground.cs" />
+    <Compile Include="D2OClasses\Guild\EmblemSymbol.cs" />
+    <Compile Include="D2OClasses\Guild\EmblemSymbolCategory.cs" />
+    <Compile Include="D2OClasses\Guild\GuildRank.cs" />
+    <Compile Include="D2OClasses\Guild\GuildRankNameSuggestion.cs" />
+    <Compile Include="D2OClasses\Guild\GuildRight.cs" />
+    <Compile Include="D2OClasses\Guild\GuildRightGroup.cs" />
+    <Compile Include="D2OClasses\Guild\GuildTag.cs" />
+    <Compile Include="D2OClasses\Guild\GuildTagsType.cs" />
+    <Compile Include="D2OClasses\Houses\HavenbagFurniture.cs" />
+    <Compile Include="D2OClasses\Houses\HavenbagTheme.cs" />
+    <Compile Include="D2OClasses\Houses\House.cs" />
+    <Compile Include="D2OClasses\Idols\Idol.cs" />
+    <Compile Include="D2OClasses\Idols\IdolsPresetIcon.cs" />
+    <Compile Include="D2OClasses\Interactives\Interactive.cs" />
+    <Compile Include="D2OClasses\Interactives\Sign.cs" />
+    <Compile Include="D2OClasses\Interactives\SkillName.cs" />
+    <Compile Include="D2OClasses\Interactives\StealthBones.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AccountRightsItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AchievementAccountItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AchievementItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AchievementObjectiveValidated.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AchievementPointsItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AlignmentItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AlignmentLevelItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AllianceAvAItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AllianceItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AllianceRightsItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\AreaItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ArenaDuelRankCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ArenaMaxDuelRankCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ArenaMaxSoloRankCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ArenaMaxTeamRankCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ArenaSoloRankCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ArenaTeamRankCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\BonesItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\BonusSetItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\BreedItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\CommunityItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\CriterionUtils.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\DayItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\EmoteItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\FriendlistItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\GiftItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\GroupItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\GuildItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\GuildLevelItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\GuildMasterItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\GuildRightsItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ItemCriterionFactory.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ItemCriterionOperator.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\JobItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\KamaItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\LevelItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\MapCharactersItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\MapItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\MariedItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\MonsterGroupChallengeCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\MonthItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\MountFamilyItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\NameItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\NewHavenbagItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\NumberOfItemMadeCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\NumberOfMountBirthedCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ObjectItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\PremiumAccountItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\PrestigeLevelItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\PVPRankItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\QuestItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\QuestObjectiveItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\RideItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\RuneByBreakingItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ServerItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ServerSeasonTemporisCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\ServerTypeItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SexItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SkillItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SmileyPackItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SoulStoneItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SpecializationItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SpellItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\StaticCriterionItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SubareaItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SubscribeItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\SubscriptionDurationItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\UnusableItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\Criterion\WeightItemCriterion.cs" />
+    <Compile Include="D2OClasses\Items\EvolutiveItemType.cs" />
+    <Compile Include="D2OClasses\Items\Incarnation.cs" />
+    <Compile Include="D2OClasses\Items\IncarnationLevel.cs" />
+    <Compile Include="D2OClasses\Items\Item.cs" />
+    <Compile Include="D2OClasses\Items\ItemSet.cs" />
+    <Compile Include="D2OClasses\Items\ItemType.cs" />
+    <Compile Include="D2OClasses\Items\LegendaryPowerCategory.cs" />
+    <Compile Include="D2OClasses\Items\PresetIcon.cs" />
+    <Compile Include="D2OClasses\Items\RandomDropGroup.cs" />
+    <Compile Include="D2OClasses\Items\RandomDropItem.cs" />
+    <Compile Include="D2OClasses\Items\VeteranReward.cs" />
+    <Compile Include="D2OClasses\Items\Weapon.cs" />
+    <Compile Include="D2OClasses\Jobs\Job.cs" />
+    <Compile Include="D2OClasses\Jobs\Recipe.cs" />
+    <Compile Include="D2OClasses\Jobs\Skill.cs" />
+    <Compile Include="D2OClasses\LivingObjects\LivingObjectSkinJntMood.cs" />
+    <Compile Include="D2OClasses\LivingObjects\SpeakingItemsTrigger.cs" />
+    <Compile Include="D2OClasses\LivingObjects\SpeakingItemText.cs" />
+    <Compile Include="D2OClasses\Misc\BreachBoss.cs" />
+    <Compile Include="D2OClasses\Misc\BreachPrize.cs" />
+    <Compile Include="D2OClasses\Misc\CensoredContent.cs" />
+    <Compile Include="D2OClasses\Misc\CharacterXPMapping.cs" />
+    <Compile Include="D2OClasses\Misc\LuaFormula.cs" />
+    <Compile Include="D2OClasses\Misc\Month.cs" />
+    <Compile Include="D2OClasses\Misc\Pack.cs" />
+    <Compile Include="D2OClasses\Misc\Subhint.cs" />
+    <Compile Include="D2OClasses\Misc\Tips.cs" />
+    <Compile Include="D2OClasses\Monsters\Companion.cs" />
+    <Compile Include="D2OClasses\Monsters\CompanionCharacteristic.cs" />
+    <Compile Include="D2OClasses\Monsters\CompanionSpell.cs" />
+    <Compile Include="D2OClasses\Monsters\Monster.cs" />
+    <Compile Include="D2OClasses\Monsters\MonsterBonusCharacteristics.cs" />
+    <Compile Include="D2OClasses\Monsters\MonsterDrop.cs" />
+    <Compile Include="D2OClasses\Monsters\MonsterDropCoefficient.cs" />
+    <Compile Include="D2OClasses\Monsters\MonsterGrade.cs" />
+    <Compile Include="D2OClasses\Monsters\MonsterMiniBoss.cs" />
+    <Compile Include="D2OClasses\Monsters\MonsterRace.cs" />
+    <Compile Include="D2OClasses\Monsters\MonsterSuperRace.cs" />
+    <Compile Include="D2OClasses\Mounts\Mount.cs" />
+    <Compile Include="D2OClasses\Mounts\MountBehavior.cs" />
+    <Compile Include="D2OClasses\Mounts\MountBone.cs" />
+    <Compile Include="D2OClasses\Mounts\MountFamily.cs" />
+    <Compile Include="D2OClasses\Mounts\RideFood.cs" />
+    <Compile Include="D2OClasses\Notifications\Notification.cs" />
+    <Compile Include="D2OClasses\Npcs\Npc.cs" />
+    <Compile Include="D2OClasses\Npcs\NpcAction.cs" />
+    <Compile Include="D2OClasses\Npcs\NpcMessage.cs" />
+    <Compile Include="D2OClasses\Npcs\TaxCollectorFirstname.cs" />
+    <Compile Include="D2OClasses\Npcs\TaxCollectorName.cs" />
+    <Compile Include="D2OClasses\OptionalFeatures\CustomModeBreedSpell.cs" />
+    <Compile Include="D2OClasses\OptionalFeatures\ForgettableSpell.cs" />
+    <Compile Include="D2OClasses\Playlists\Playlist.cs" />
+    <Compile Include="D2OClasses\Popup\PopupButton.cs" />
+    <Compile Include="D2OClasses\Popup\PopupInformation.cs" />
+    <Compile Include="D2OClasses\Progression\ActivitySuggestion.cs" />
+    <Compile Include="D2OClasses\Progression\ActivitySuggestionsCategory.cs" />
+    <Compile Include="D2OClasses\Progression\FeatureDescription.cs" />
+    <Compile Include="D2OClasses\Quest\Achievement.cs" />
+    <Compile Include="D2OClasses\Quest\AchievementCategory.cs" />
+    <Compile Include="D2OClasses\Quest\AchievementObjective.cs" />
+    <Compile Include="D2OClasses\Quest\AchievementReward.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveBringItemToNpc.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveBringSoulToNpc.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveCraftItem.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveDiscoverMap.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveDiscoverSubArea.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveDuelSpecificPlayer.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveFightMonster.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveFightMonstersOnMap.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveFreeForm.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveGoToNpc.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveMultiFightMonster.cs" />
+    <Compile Include="D2OClasses\Quest\Objectives\QuestObjectiveParameters.cs" />
+    <Compile Include="D2OClasses\Quest\Quest.cs" />
+    <Compile Include="D2OClasses\Quest\QuestCategory.cs" />
+    <Compile Include="D2OClasses\Quest\QuestObjective.cs" />
+    <Compile Include="D2OClasses\Quest\QuestObjectiveType.cs" />
+    <Compile Include="D2OClasses\Quest\QuestStep.cs" />
+    <Compile Include="D2OClasses\Quest\QuestStepRewards.cs" />
+    <Compile Include="D2OClasses\Quest\TreasureHunt\LegendaryTreasureHunt.cs" />
+    <Compile Include="D2OClasses\Quest\TreasureHunt\PointOfInterest.cs" />
+    <Compile Include="D2OClasses\Quest\TreasureHunt\PointOfInterestCategory.cs" />
+    <Compile Include="D2OClasses\Servers\Server.cs" />
+    <Compile Include="D2OClasses\Servers\ServerCommunity.cs" />
+    <Compile Include="D2OClasses\Servers\ServerGameType.cs" />
+    <Compile Include="D2OClasses\Servers\ServerLang.cs" />
+    <Compile Include="D2OClasses\Servers\ServerPopulation.cs" />
+    <Compile Include="D2OClasses\Servers\ServerTemporisSeason.cs" />
+    <Compile Include="D2OClasses\Sounds\SoundAnimation.cs" />
+    <Compile Include="D2OClasses\Sounds\SoundBones.cs" />
+    <Compile Include="D2OClasses\Sounds\SoundUi.cs" />
+    <Compile Include="D2OClasses\Sounds\SoundUiElement.cs" />
+    <Compile Include="D2OClasses\Sounds\SoundUiHook.cs" />
+    <Compile Include="D2OClasses\Spells\FinishMove.cs" />
+    <Compile Include="D2OClasses\Spells\Spell.cs" />
+    <Compile Include="D2OClasses\Spells\SpellBomb.cs" />
+    <Compile Include="D2OClasses\Spells\SpellConversion.cs" />
+    <Compile Include="D2OClasses\Spells\SpellLevel.cs" />
+    <Compile Include="D2OClasses\Spells\SpellPair.cs" />
+    <Compile Include="D2OClasses\Spells\SpellState.cs" />
+    <Compile Include="D2OClasses\Spells\SpellType.cs" />
+    <Compile Include="D2OClasses\Spells\SpellVariant.cs" />
+    <Compile Include="D2OClasses\Temporis\AchievementProgress.cs" />
+    <Compile Include="D2OClasses\Temporis\AchievementProgressStep.cs" />
+    <Compile Include="D2OClasses\World\Area.cs" />
+    <Compile Include="D2OClasses\World\Dungeon.cs" />
+    <Compile Include="D2OClasses\World\Hint.cs" />
+    <Compile Include="D2OClasses\World\HintCategory.cs" />
+    <Compile Include="D2OClasses\World\MapCoordinates.cs" />
+    <Compile Include="D2OClasses\World\MapPosition.cs" />
+    <Compile Include="D2OClasses\World\MapReference.cs" />
+    <Compile Include="D2OClasses\World\MapScrollAction.cs" />
+    <Compile Include="D2OClasses\World\Phoenix.cs" />
+    <Compile Include="D2OClasses\World\SubArea.cs" />
+    <Compile Include="D2OClasses\World\SuperArea.cs" />
+    <Compile Include="D2OClasses\World\Waypoint.cs" />
+    <Compile Include="D2OClasses\World\WorldMap.cs" />
+    <Compile Include="D2OTypes\AnimFunData.cs" />
+    <Compile Include="D2OTypes\AnimFunMonsterData.cs" />
+    <Compile Include="D2OTypes\AnimFunNpcData.cs" />
+    <Compile Include="D2OTypes\Point.cs" />
+    <Compile Include="D2OTypes\Proxy.cs" />
+    <Compile Include="D2OTypes\Rectangle.cs" />
+    <Compile Include="D2OTypes\TransformData.cs" />
+    <Compile Include="D2O\D2OClassAttribute.cs" />
+    <Compile Include="D2O\D2OClassDefinition.cs" />
+    <Compile Include="D2O\D2OFieldAttribute.cs" />
+    <Compile Include="D2O\D2OFieldDefinition.cs" />
+    <Compile Include="D2O\D2OFieldType.cs" />
+    <Compile Include="D2O\D2OIgnore.cs" />
+    <Compile Include="D2O\D2OManager.cs" />
+    <Compile Include="D2O\D2OReader.cs" />
+    <Compile Include="D2O\D2OSearchEntry.cs" />
+    <Compile Include="D2O\D2OWriter.cs" />
+    <Compile Include="D2O\I18NFieldAttribute.cs" />
+    <Compile Include="D2P\D2PDirectory.cs" />
+    <Compile Include="D2P\D2PEntry.cs" />
+    <Compile Include="D2P\D2PEntryState.cs" />
+    <Compile Include="D2P\D2PExtractor.cs" />
+    <Compile Include="D2P\D2PFile.cs" />
+    <Compile Include="D2P\D2PFastMapFile.cs" />
+    <Compile Include="D2P\D2PIndexTable.cs" />
+    <Compile Include="D2P\D2PProperty.cs" />
+    <Compile Include="D2UI\D2UIFile.cs" />
+    <Compile Include="DLM\DlmCell.cs" />
+    <Compile Include="DLM\CellData.cs" />
+    <Compile Include="DLM\CompressedMap.cs" />
+    <Compile Include="DLM\Elements\BasicElement.cs" />
+    <Compile Include="DLM\Elements\GraphicalElement.cs" />
+    <Compile Include="DLM\Elements\SoundElement.cs" />
+    <Compile Include="DLM\Fixture.cs" />
+    <Compile Include="DLM\Layer.cs" />
+    <Compile Include="DLM\DlmMap.cs" />
+    <Compile Include="DLM\WorldPoint.cs" />
+    <Compile Include="ELE\EleGraphicalData.cs" />
+    <Compile Include="ELE\EleGraphicalElementTypes.cs" />
+    <Compile Include="ELE\Elements.cs" />
+    <Compile Include="ELE\EleReader.cs" />
+    <Compile Include="ELE\Repertory\AnimatedGraphicalElementData.cs" />
+    <Compile Include="ELE\Repertory\BlendedGraphicalElementData.cs" />
+    <Compile Include="ELE\Repertory\BoundingBoxGraphicalElementData.cs" />
+    <Compile Include="ELE\Repertory\EntityGraphicalElementData.cs" />
+    <Compile Include="ELE\Repertory\NormalGraphicalElementData.cs" />
+    <Compile Include="ELE\Repertory\ParticlesGraphicalElementData.cs" />
+    <Compile Include="MA3\MA3ItemFile.cs" />
+    <Compile Include="MA3\MA3MountFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RawPatch\RawPatchManager.cs" />
+    <Compile Include="SWL\SwlFile.cs" />
+    <Compile Include="ZIP\ZipHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Giny.Core\Giny.Core.csproj">
+      <Project>{8AB2DC30-B9CC-4D45-8104-71B384BB5F57}</Project>
+      <Name>Giny.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

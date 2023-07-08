@@ -1,0 +1,38 @@
+﻿<Window x:Class="Raiders.Uplauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Raiders.Uplauncher"
+        mc:Ignorable="d"
+        Title="Raiders.Uplauncher" Height="297.224" WindowStartupLocation="CenterScreen" Width="597.127" Background="White" WindowStyle="None" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Left" Width="597">
+        <Image Name="background" Source="Images/background.png" HorizontalAlignment="Left" Height="299" VerticalAlignment="Top" Width="598" Stretch="None" Margin="0,0,-1,0"/>
+
+        <Image HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="81" Source="Images/corner_decoration_small.png"/>
+        <Image HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="529" Source="Images/tx_gradient_vertical_dark_bar.png" Margin="-259,177,0,0" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="529" Source="Images/tx_gradient_vertical_dark_bar.png" Margin="325,171,-257,0" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <ProgressBar x:Name="progress" BorderBrush="White" Background="Transparent" Foreground="White" Value="0" HorizontalAlignment="Left" Height="10" Margin="10,277,0,0" VerticalAlignment="Top" Width="574"/>
+        <Label HorizontalContentAlignment="Center" x:Name="stateLabel" Foreground="White" Content="En attente du serveur ..."  Margin="10,246,13,0" VerticalAlignment="Top"/>
+        <Image x:Name="closeButton" HorizontalAlignment="Left" Height="35" Margin="553,10,0,0" VerticalAlignment="Top" Width="44" Stretch="None" Source="Images/btn_close_normal.png"/>
+
+    </Grid>
+</Window>

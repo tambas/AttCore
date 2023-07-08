@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C81205A-634D-4AA9-B00A-5B31FAD1C5A3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Giny.World</RootNamespace>
+    <AssemblyName>Giny.World</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Diagnostics, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Diagnostics.4.1.1\lib\net45\Microsoft.Owin.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.4.1.1\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.4.1.1\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.4.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.4.0\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\CharacterEventApi.cs" />
+    <Compile Include="Api\FightEventApi.cs" />
+    <Compile Include="Api\InventoryEventApi.cs" />
+    <Compile Include="Handlers\Roleplay\Arena\ArenaHandler.cs" />
+    <Compile Include="Handlers\Roleplay\HavenBag\HavenBagHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Idols\IdolsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Items\MimicrysHandler.cs" />
+    <Compile Include="Logging\LogManager.cs" />
+    <Compile Include="Managers\Bidshops\AveragePriceScheduler.cs" />
+    <Compile Include="Handlers\Roleplay\Parties\PartiesHandler.cs" />
+    <Compile Include="Managers\Criterias\ActionPointsCriteria.cs" />
+    <Compile Include="Managers\Criterias\AgilityCriteria.cs" />
+    <Compile Include="Managers\Criterias\BreedCriteria.cs" />
+    <Compile Include="Managers\Criterias\ChanceCriteria.cs" />
+    <Compile Include="Managers\Criterias\Criteria.cs" />
+    <Compile Include="Managers\Criterias\EmoteCriteria.cs" />
+    <Compile Include="Managers\Criterias\AlignmentCriteria.cs" />
+    <Compile Include="Managers\Criterias\GuildCriteria.cs" />
+    <Compile Include="Managers\Criterias\HasItemCriteria.cs" />
+    <Compile Include="Managers\Criterias\HasOrnamentCriteria.cs" />
+    <Compile Include="Managers\Criterias\HasTitleCriteria.cs" />
+    <Compile Include="Managers\Criterias\IntelligenceCriteria.cs" />
+    <Compile Include="Managers\Criterias\ItemSetCriteria.cs" />
+    <Compile Include="Managers\Criterias\LevelCriteria.cs" />
+    <Compile Include="Managers\Criterias\MovementPointsCriteria.cs" />
+    <Compile Include="Managers\Criterias\NotEquipableCriteria.cs" />
+    <Compile Include="Managers\Criterias\StrengthCriteria.cs" />
+    <Compile Include="Managers\Criterias\SubscribedCriteria.cs" />
+    <Compile Include="Managers\Criterias\VitalityCriteria.cs" />
+    <Compile Include="Managers\Criterias\WisdomCriteria.cs" />
+    <Compile Include="Managers\Dialogs\BookDialog.cs" />
+    <Compile Include="Managers\Dialogs\GuildCreationDialog.cs" />
+    <Compile Include="Managers\Dialogs\DialogBox\GuildInvitationRequest.cs" />
+    <Compile Include="Managers\Effects\EffectCollection.cs" />
+    <Compile Include="Managers\Effects\EffectCustom.cs" />
+    <Compile Include="Managers\Effects\EffectPokefus.cs" />
+    <Compile Include="Managers\Effects\EffectPokefusLevel.cs" />
+    <Compile Include="Managers\Effects\Targets\CanSummonCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\CarriedCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\InvalidTeleportCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\ThroughPortalCriterion.cs" />
+    <Compile Include="Managers\Entities\Monsters\ModularMonsterGroup.cs" />
+    <Compile Include="Managers\Exchanges\Jobs\CraftExchange.cs" />
+    <Compile Include="Managers\Exchanges\Jobs\JobExchange.cs" />
+    <Compile Include="Managers\Exchanges\Jobs\RuneTradeExchange.cs" />
+    <Compile Include="Managers\Exchanges\MerchantSellerExchange.cs" />
+    <Compile Include="Managers\Exchanges\Jobs\SmithmagicExchange.cs" />
+    <Compile Include="Managers\Fights\AI\AIAction.cs" />
+    <Compile Include="Managers\Fights\AI\BuffAction.cs" />
+    <Compile Include="Managers\Fights\AI\CastOnEnemyAction.cs" />
+    <Compile Include="Managers\Fights\AI\FleeAction.cs" />
+    <Compile Include="Managers\Fights\AI\HealAction.cs" />
+    <Compile Include="Managers\Fights\AI\MarkAction.cs" />
+    <Compile Include="Managers\Fights\AI\MoveToTarget.cs" />
+    <Compile Include="Managers\Fights\AI\SummonAction.cs" />
+    <Compile Include="Managers\Fights\Buffs\DisableStateBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\GlobalDamageReductionBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\RandModifierBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\RescaleSkinBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SkipTurnBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellBoost\SpellBoostIncreaseApCostBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellBoost\SpellBoostRangeBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellBoost\SpellBoostBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellBoost\SpellBoostRemoveLOSBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellBoost\SpellReduceMinimalRangeBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellBoost\SpellReduceRangeBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\TakeControlBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\VitalityDebuff.cs" />
+    <Compile Include="Managers\Fights\Challenges\Anchorite.cs" />
+    <Compile Include="Managers\Fights\Challenges\Challenge.cs" />
+    <Compile Include="Managers\Fights\Challenges\ChallengeResultEnum.cs" />
+    <Compile Include="Managers\Fights\Challenges\ChallengesManager.cs" />
+    <Compile Include="Managers\Fights\Challenges\DevCheat.cs" />
+    <Compile Include="Managers\Fights\Challenges\Mystical.cs" />
+    <Compile Include="Managers\Fights\Challenges\Nomadic.cs" />
+    <Compile Include="Managers\Fights\Challenges\Petulant.cs" />
+    <Compile Include="Managers\Fights\Challenges\Pusillanimous.cs" />
+    <Compile Include="Managers\Fights\Challenges\Statue.cs" />
+    <Compile Include="Managers\Fights\Challenges\Tights.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\ArmorDamageReduction.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddRandModifier.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\HealBuff.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\IncreaseSize.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\SpellBoostRange.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\SkipTurn.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell1017.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell1018.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell1019.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell2017.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell2792.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell2795.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamageIntercept.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamagePerApUsed.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamagePerCasterHpEroded.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamagePerHpEroded.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamagePerHpLost.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamageSharing.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\ReflectDamage.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\DisableState.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\IncreaseSpellApCost.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\ReduceEffectsDuration.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\ReduceSpellMinimalRange.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\ReduceSpellRange.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\RevealsInvisible.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\SubVitalityPercent.cs" />
+    <Compile Include="Managers\Fights\Effects\Heals\GiveHpPercent.cs" />
+    <Compile Include="Managers\Fights\Effects\Heals\GiveHpPercentWhenAttack.cs" />
+    <Compile Include="Managers\Fights\Effects\Marks\DisablePortal.cs" />
+    <Compile Include="Managers\Fights\Effects\Marks\SpawnGlyph.cs" />
+    <Compile Include="Managers\Fights\Effects\Marks\SpawnGlyphAura.cs" />
+    <Compile Include="Managers\Fights\Effects\Marks\SpawnPortal.cs" />
+    <Compile Include="Managers\Fights\Effects\Marks\TriggerGlyphs.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\TeleportPortal.cs" />
+    <Compile Include="Managers\Fights\Effects\Other\Carry.cs" />
+    <Compile Include="Managers\Fights\Effects\Other\Throw.cs" />
+    <Compile Include="Managers\Fights\Effects\Steal\StealMp.cs" />
+    <Compile Include="Managers\Fights\Effects\Summons\SummonBomb.cs" />
+    <Compile Include="Managers\Fights\FightContextual.cs" />
+    <Compile Include="Managers\Fights\Fighters\SummonedBomb.cs" />
+    <Compile Include="Managers\Fights\Marks\PortalManager.cs" />
+    <Compile Include="Managers\Fights\Marks\Wall.cs" />
+    <Compile Include="Managers\Fights\Movements\Movement.cs" />
+    <Compile Include="Managers\Fights\Movements\MovementType.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\ReturnToOriginalPosition.cs" />
+    <Compile Include="Managers\Fights\Effects\Summons\Double.cs" />
+    <Compile Include="Managers\Fights\Effects\Summons\KillAndSummon.cs" />
+    <Compile Include="Managers\Fights\Effects\Summons\KillAndSummonSlave.cs" />
+    <Compile Include="Managers\Fights\Effects\Summons\SummonSlave.cs" />
+    <Compile Include="Managers\Fights\Effects\Summons\TakeControl.cs" />
+    <Compile Include="Managers\Fights\Fighters\DoubleFighter.cs" />
+    <Compile Include="Managers\Fights\Fighters\SummonedMonster.cs" />
+    <Compile Include="Managers\Fights\Marks\Glyph.cs" />
+    <Compile Include="Managers\Fights\Marks\GlyphAura.cs" />
+    <Compile Include="Managers\Fights\Marks\MarksManager.cs" />
+    <Compile Include="Managers\Fights\Marks\Portal.cs" />
+    <Compile Include="Managers\Fights\Triggers\Death.cs" />
+    <Compile Include="Managers\Fights\Triggers\Trigger.cs" />
+    <Compile Include="Managers\Fights\Zones\ZoneManager.cs" />
+    <Compile Include="Managers\Guilds\Guild.cs" />
+    <Compile Include="Managers\Guilds\GuildMotd.cs" />
+    <Compile Include="Managers\Guilds\GuildsManager.cs" />
+    <Compile Include="Managers\Idols\IdolXp.cs" />
+    <Compile Include="Managers\Items\Collections\BankItemCollection.cs" />
+    <Compile Include="Managers\Items\Collections\BasicItemCollection.cs" />
+    <Compile Include="Managers\Items\Collections\JobItemCollection.cs" />
+    <Compile Include="Managers\Items\Collections\TradeItemCollection.cs" />
+    <Compile Include="Managers\Idols\IdolsInventory.cs" />
+    <Compile Include="Managers\Stats\PointDodgeCharacteristic.cs" />
+    <Compile Include="Network\INetworkEntity.cs" />
+    <Compile Include="Records\Challenges\ChallengeRecord.cs" />
+    <Compile Include="Records\Guilds\GuildEmblemRecord.cs" />
+    <Compile Include="Records\Guilds\GuildMemberRecord.cs" />
+    <Compile Include="Managers\Items\Collections\MerchantSellerItemCollection.cs" />
+    <Compile Include="Managers\Fights\Zones\SemiColumn.cs" />
+    <Compile Include="Managers\Parties\Party.cs" />
+    <Compile Include="Managers\Parties\ClassicalParty.cs" />
+    <Compile Include="Managers\Parties\PartyManager.cs" />
+    <Compile Include="Records\Guilds\GuildRecord.cs" />
+    <Compile Include="Records\Idols\IdolRecord.cs" />
+    <Compile Include="Records\Jobs\RecipeRecord.cs" />
+    <Compile Include="Web\WebGiftManager.cs" />
+    <Compile Include="Modules\AssemblyCore.cs" />
+    <Compile Include="ConfigFile.cs" />
+    <Compile Include="Handlers\BasicHandler.cs" />
+    <Compile Include="Handlers\Fights\FightsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Admin\AdminHandler.cs" />
+    <Compile Include="Handlers\Approach\ApproachHandler.cs" />
+    <Compile Include="Handlers\Approach\CharacterHandler.cs" />
+    <Compile Include="Handlers\ContextHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Bidshops\BidshopsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Exchanges\ExchangesHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Guilds\GuildsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Maps\DialogsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Maps\InteractivesHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Maps\Npcs\NpcsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Maps\Paths\PathReader.cs" />
+    <Compile Include="Handlers\Roleplay\Maps\TeleporterHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Shortcuts\ShortcutsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Social\ChatHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Social\FriendsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Items\InventoryHandler.cs" />
+    <Compile Include="Handlers\IPCHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Maps\MapsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Quests\QuestsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Spells\SpellsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Stats\StatsHandler.cs" />
+    <Compile Include="Handlers\Roleplay\Tinsel\TinselHandler.cs" />
+    <Compile Include="Managers\Bidshops\BidshopsManager.cs" />
+    <Compile Include="Managers\Breeds\BreedManager.cs" />
+    <Compile Include="Managers\Chat\ChatChannelHandlerAttribute.cs" />
+    <Compile Include="Managers\Chat\ChatChannels.cs" />
+    <Compile Include="Managers\Chat\ChatChannelsManager.cs" />
+    <Compile Include="Managers\Chat\ChatCommands.cs" />
+    <Compile Include="Managers\Chat\ChatCommandsManager.cs" />
+    <Compile Include="Managers\Criterias\CriteriaManager.cs" />
+    <Compile Include="Managers\Dialogs\Dialog.cs" />
+    <Compile Include="Managers\Dialogs\DialogBox\DualRequest.cs" />
+    <Compile Include="Managers\Dialogs\DialogBox\PlayerTradeRequestBox.cs" />
+    <Compile Include="Managers\Dialogs\DialogBox\RequestBox.cs" />
+    <Compile Include="Managers\Dialogs\NpcTalkDialog.cs" />
+    <Compile Include="Managers\Dialogs\TeleporterDialog.cs" />
+    <Compile Include="Managers\Dialogs\ZaapDialog.cs" />
+    <Compile Include="Managers\Dialogs\ZaapiDialog.cs" />
+    <Compile Include="Managers\Effects\Effect.cs" />
+    <Compile Include="Managers\Effects\EffectDice.cs" />
+    <Compile Include="Managers\Effects\EffectInteger.cs" />
+    <Compile Include="Managers\Effects\Targets\BreedCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\JustSummonedCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\SummonerCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\TelefragCriterion.cs" />
+    <Compile Include="Managers\Fights\AI\MonsterBrain.cs" />
+    <Compile Include="Managers\Fights\Buffs\ErosionBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\FinalDamageBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\InvisibilityBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\ResistanceBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellDamageBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellBoost\SpellBoostReduceApCostBuff.cs" />
+    <Compile Include="Managers\Fights\Cast\Spell.cs" />
+    <Compile Include="Managers\Fights\Cast\SpellCastHandlerAttribute.cs" />
+    <Compile Include="Managers\Fights\Cast\Telefrag.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddErosion.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddShield.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddVitality.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\IncreaseFinalDamages.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddShieldPercent.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddSpellDamagePercent.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\Invisibility.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\Resistances.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\SpellReduceApCost.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell2160.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell2794.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamagePercent.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamagePerMpUsed.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamagePerRemainingMp.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\ReduceFinalDamages.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\StatsDebuff.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\SubApRoll.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\SubMpRoll.cs" />
+    <Compile Include="Managers\Fights\Effects\Heals\HealHpPercent.cs" />
+    <Compile Include="Managers\Fights\Effects\Heals\HealReceivedDamage.cs" />
+    <Compile Include="Managers\Fights\Effects\Marks\SpawnRune.cs" />
+    <Compile Include="Managers\Fights\Effects\Marks\TriggerRunes.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\Retreat.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\ReturnToLastPos.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\Rewind.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\SwitchPosition.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\ReduceSpellCooldown.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\SymetricCasterTeleport.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\SymetricPointTeleport.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\SymetricTargetTeleport.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\TeleportRune.cs" />
+    <Compile Include="Managers\Fights\Effects\Other\DamageMultiplier.cs" />
+    <Compile Include="Managers\Fights\Effects\Other\DisableLOS.cs" />
+    <Compile Include="Managers\Fights\Buffs\LookBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\ShieldBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\VitalityBuff.cs" />
+    <Compile Include="Managers\Fights\Cast\Units\Healing.cs" />
+    <Compile Include="Managers\Fights\Effects\Steal\StatsSteal.cs" />
+    <Compile Include="Managers\Fights\History\MovementFailedReason.cs" />
+    <Compile Include="Managers\Fights\History\MovementHistoryEntry.cs" />
+    <Compile Include="Managers\Fights\History\SpellHistory.cs" />
+    <Compile Include="Managers\Fights\History\SpellHistoryEntry.cs" />
+    <Compile Include="Managers\Fights\Cast\ITriggerToken.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddShieldLevel.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddVitalityPercent.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\ChangeAppearance.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\MpBuff.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamageResult.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DispatchDamage.cs" />
+    <Compile Include="Managers\Fights\Effects\Steal\StealHp.cs" />
+    <Compile Include="Managers\Fights\Effects\Heals\HealHp.cs" />
+    <Compile Include="Managers\Fights\Effects\Marks\SpawnTrap.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\RepelsTo.cs" />
+    <Compile Include="Managers\Fights\Effects\Other\Kill.cs" />
+    <Compile Include="Managers\Fights\Effects\Other\NoMoreEffects.cs" />
+    <Compile Include="Managers\Fights\Effects\Summons\Summon.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell792.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DamageBestElement.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\MpDebuff.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\Advance.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\PullForward.cs" />
+    <Compile Include="Managers\Fights\Effects\Other\RemoveSpellEffects.cs" />
+    <Compile Include="Managers\Fights\Effects\Other\SetSpellCooldown.cs" />
+    <Compile Include="Managers\Fights\Effects\SpellAppearanceManager.cs" />
+    <Compile Include="Managers\Fights\Effects\SpellAppearances.cs" />
+    <Compile Include="Managers\Fights\Effects\SpellEffectManager.cs" />
+    <Compile Include="Managers\Effects\EffectString.cs" />
+    <Compile Include="Managers\Fights\Buffs\Buff.cs" />
+    <Compile Include="Managers\Fights\Triggers\TriggerTypeEnum.cs" />
+    <Compile Include="Managers\Fights\Buffs\SpellBoost\SpellBoostBaseDamageBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\StatBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\StateBuff.cs" />
+    <Compile Include="Managers\Fights\Buffs\TriggerBuff.cs" />
+    <Compile Include="Managers\Fights\Cast\Units\Damage.cs" />
+    <Compile Include="Managers\Fights\Cast\Jet.cs" />
+    <Compile Include="Managers\Fights\Cast\SpellEffectHandler.cs" />
+    <Compile Include="Managers\Fights\Cast\SpellEffectHandlerAttribute.cs" />
+    <Compile Include="Managers\Effects\Targets\LifeCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\MonsterCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\SpellTargetType.cs" />
+    <Compile Include="Managers\Effects\Targets\StateCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\TargetCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\TargetTypeCriterion.cs" />
+    <Compile Include="Managers\Effects\Targets\UnknownCriterion.cs" />
+    <Compile Include="Managers\Entities\Characters\Character.cs" />
+    <Compile Include="Managers\Entities\Characters\CharacterLevelRewardManager.cs" />
+    <Compile Include="Managers\Entities\Characters\CharacterManager.cs" />
+    <Compile Include="Managers\Entities\Merchants\CharacterMerchant.cs" />
+    <Compile Include="Managers\Entities\Characters\HumanOptions\CharacterHumanOption.cs" />
+    <Compile Include="Managers\Entities\Characters\HumanOptions\CharacterHumanOptionEmote.cs" />
+    <Compile Include="Managers\Entities\Characters\HumanOptions\CharacterHumanOptionFollowers.cs" />
+    <Compile Include="Managers\Entities\Characters\HumanOptions\CharacterHumanOptionGuild.cs" />
+    <Compile Include="Managers\Entities\Characters\HumanOptions\CharacterHumanOptionOrnament.cs" />
+    <Compile Include="Managers\Entities\Characters\HumanOptions\CharacterHumanOptionTitle.cs" />
+    <Compile Include="Managers\Entities\Characters\HumanOptions\HumanOptionsManager.cs" />
+    <Compile Include="Managers\Entities\Entity.cs" />
+    <Compile Include="Managers\Entities\Look\EntityLookManager.cs" />
+    <Compile Include="Managers\Entities\Look\ServerEntityLook.cs" />
+    <Compile Include="Managers\Entities\Look\ServerSubentityLook.cs" />
+    <Compile Include="Managers\Entities\Merchants\MerchantsManager.cs" />
+    <Compile Include="Managers\Entities\Monsters\MonsterDrop.cs" />
+    <Compile Include="Managers\Entities\Npcs\Npc.cs" />
+    <Compile Include="Managers\Exchanges\BankExchange.cs" />
+    <Compile Include="Managers\Exchanges\BuyExchange.cs" />
+    <Compile Include="Managers\Exchanges\BuySellExchange.cs" />
+    <Compile Include="Managers\Exchanges\Exchange.cs" />
+    <Compile Include="Managers\Exchanges\MerchantVendorExchange.cs" />
+    <Compile Include="Managers\Exchanges\PlayerTradeExchange.cs" />
+    <Compile Include="Managers\Exchanges\SellExchange.cs" />
+    <Compile Include="Managers\Experiences\ExperienceManager.cs" />
+    <Compile Include="Managers\Fights\Actions\ActionsEnum.cs" />
+    <Compile Include="Managers\Fights\Cast\DefaultSpellCastHandler.cs" />
+    <Compile Include="Managers\Fights\Cast\SpellCast.cs" />
+    <Compile Include="Managers\Fights\Cast\SpellCastHandler.cs" />
+    <Compile Include="Managers\Fights\Cast\SpellCastResult.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\ApBuff.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\SpellBoostBaseDamage.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\StatsBuff.cs" />
+    <Compile Include="Managers\Fights\Effects\Debuffs\ApDebuff.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\PushBack.cs" />
+    <Compile Include="Managers\Fights\Effects\Movements\Teleport.cs" />
+    <Compile Include="Managers\Fights\Effects\Buffs\AddState.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell793.cs" />
+    <Compile Include="Managers\Fights\Effects\Cast\CastSpell1160.cs" />
+    <Compile Include="Managers\Fights\FightDual.cs" />
+    <Compile Include="Managers\Fights\Fighters\IMonster.cs" />
+    <Compile Include="Managers\Fights\Fighters\LastAttackerCriterion.cs" />
+    <Compile Include="Managers\Fights\History\MovementHistory.cs" />
+    <Compile Include="Managers\Fights\Marks\Mark.cs" />
+    <Compile Include="Managers\Fights\Marks\MarkShape.cs" />
+    <Compile Include="Managers\Fights\Marks\MarkTriggerType.cs" />
+    <Compile Include="Managers\Fights\Marks\Rune.cs" />
+    <Compile Include="Managers\Fights\Marks\Trap.cs" />
+    <Compile Include="Managers\Fights\Tackle.cs" />
+    <Compile Include="Managers\Items\WeaponManager.cs" />
+    <Compile Include="Managers\Maps\Paths\Node.cs" />
+    <Compile Include="Managers\Maps\Paths\Pathfinding.cs" />
+    <Compile Include="Managers\Spells\SpellManager.cs" />
+    <Compile Include="Managers\Fights\Cast\ZoneEnum.cs" />
+    <Compile Include="Managers\Fights\Effects\Damages\DirectDamage.cs" />
+    <Compile Include="Managers\Fights\Fight.cs" />
+    <Compile Include="Managers\Fights\Fighters\AIFighter.cs" />
+    <Compile Include="Managers\Fights\Fighters\CharacterFighter.cs" />
+    <Compile Include="Managers\Fights\Fighters\Fighter.cs" />
+    <Compile Include="Managers\Fights\Fighters\MonsterFighter.cs" />
+    <Compile Include="Managers\Fights\Fighters\SummonedFighter.cs" />
+    <Compile Include="Managers\Fights\FightManager.cs" />
+    <Compile Include="Managers\Fights\FightPvM.cs" />
+    <Compile Include="Managers\Fights\FightTeam.cs" />
+    <Compile Include="Managers\Fights\FightTeamOptions.cs" />
+    <Compile Include="Managers\Fights\Results\FightExperienceData.cs" />
+    <Compile Include="Managers\Fights\Results\FightPlayerResult.cs" />
+    <Compile Include="Managers\Fights\Results\FightPvpData.cs" />
+    <Compile Include="Managers\Fights\Results\FightResult.cs" />
+    <Compile Include="Managers\Fights\Results\IFightResult.cs" />
+    <Compile Include="Managers\Fights\Results\Loot.cs" />
+    <Compile Include="Managers\Fights\Results\ResultAdditionalData.cs" />
+    <Compile Include="Managers\Fights\Sequences\FightSequence.cs" />
+    <Compile Include="Managers\Fights\Sequences\SequenceTypeEnum.cs" />
+    <Compile Include="Managers\Fights\Stats\FighterStats.cs" />
+    <Compile Include="Managers\Fights\Synchronisation\SequenceManager.cs" />
+    <Compile Include="Managers\Fights\Synchronisation\Synchronizer.cs" />
+    <Compile Include="Managers\Fights\Timeline\FightTimeline.cs" />
+    <Compile Include="Managers\Formulas\FightFormulas.cs" />
+    <Compile Include="Managers\Formulas\JobFormulas.cs" />
+    <Compile Include="Managers\Formulas\StatsFormulas.cs" />
+    <Compile Include="Managers\Formulas\TeleporterFormulas.cs" />
+    <Compile Include="Managers\Generic\GenericActionEnum.cs" />
+    <Compile Include="Managers\Generic\GenericActions.cs" />
+    <Compile Include="Managers\Generic\GenericActionsManager.cs" />
+    <Compile Include="Managers\Generic\IGenericActionParameter.cs" />
+    <Compile Include="Managers\Items\Collections\Inventory.cs" />
+    <Compile Include="Managers\Items\Collections\ItemCollection.cs" />
+    <Compile Include="Managers\Items\ItemEffects.cs" />
+    <Compile Include="Managers\Items\ItemEffectsManager.cs" />
+    <Compile Include="Managers\Items\ItemsManager.cs" />
+    <Compile Include="Managers\Items\ItemUses.cs" />
+    <Compile Include="Managers\Items\LivingObjectManager.cs" />
+    <Compile Include="Managers\Items\Collections\MerchantItemCollection.cs" />
+    <Compile Include="Managers\Maps\Elements\MapElement.cs" />
+    <Compile Include="Managers\Maps\Elements\MapInteractiveElement.cs" />
+    <Compile Include="Managers\Maps\Elements\MapStatedElement.cs" />
+    <Compile Include="Managers\Maps\Elements\StatedElementState.cs" />
+    <Compile Include="Managers\Maps\Instances\MapInstance.cs" />
+    <Compile Include="Managers\Maps\Instances\ClassicMapInstance.cs" />
+    <Compile Include="Managers\Maps\MapPoint.cs" />
+    <Compile Include="Managers\Maps\MapsManager.cs" />
+    <Compile Include="Managers\Maps\Npcs\NpcActions.cs" />
+    <Compile Include="Managers\Maps\Npcs\NpcsManager.cs" />
+    <Compile Include="Managers\Fights\Zones\All.cs" />
+    <Compile Include="Managers\Fights\Zones\Cone.cs" />
+    <Compile Include="Managers\Fights\Zones\Cross.cs" />
+    <Compile Include="Managers\Fights\Zones\DirectionsExtensions.cs" />
+    <Compile Include="Managers\Fights\Zones\HalfLozenge.cs" />
+    <Compile Include="Managers\Fights\Zones\Line.cs" />
+    <Compile Include="Managers\Fights\Zones\LineSet.cs" />
+    <Compile Include="Managers\Fights\Zones\Lozenge.cs" />
+    <Compile Include="Managers\Fights\Zones\Sets\Complement.cs" />
+    <Compile Include="Managers\Fights\Zones\Sets\CrossSet.cs" />
+    <Compile Include="Managers\Fights\Zones\Sets\Intersection.cs" />
+    <Compile Include="Managers\Fights\Zones\Sets\LozengeSet.cs" />
+    <Compile Include="Managers\Fights\Zones\Sets\Set.cs" />
+    <Compile Include="Managers\Fights\Zones\Sets\Union.cs" />
+    <Compile Include="Managers\Fights\Zones\Single.cs" />
+    <Compile Include="Managers\Fights\Zones\Square.cs" />
+    <Compile Include="Managers\Fights\Zones\Zone.cs" />
+    <Compile Include="Managers\Maps\Teleporters\TeleportersManager.cs" />
+    <Compile Include="Managers\Entities\Monsters\Monster.cs" />
+    <Compile Include="Managers\Entities\Monsters\MonsterGrade.cs" />
+    <Compile Include="Managers\Entities\Monsters\MonsterGroup.cs" />
+    <Compile Include="Managers\Entities\Monsters\MonstersManager.cs" />
+    <Compile Include="Managers\Shortcuts\CharacterEmoteShortcut.cs" />
+    <Compile Include="Managers\Shortcuts\CharacterItemShortcut.cs" />
+    <Compile Include="Managers\Shortcuts\CharacterShortcut.cs" />
+    <Compile Include="Managers\Shortcuts\CharacterSmileyShortcut.cs" />
+    <Compile Include="Managers\Shortcuts\CharacterSpellShortcut.cs" />
+    <Compile Include="Managers\Shortcuts\SpellShortcutBar.cs" />
+    <Compile Include="Managers\Skills\SkillsManager.cs" />
+    <Compile Include="Managers\Spells\CharacterSpell.cs" />
+    <Compile Include="Managers\Stats\ApCharacteristic.cs" />
+    <Compile Include="Managers\Stats\Characteristic.cs" />
+    <Compile Include="Managers\Stats\EntityStats.cs" />
+    <Compile Include="Managers\Stats\LimitedCharacteristic.cs" />
+    <Compile Include="Managers\Stats\MpCharacteristic.cs" />
+    <Compile Include="Managers\Stats\RangeCharacteristic.cs" />
+    <Compile Include="Managers\Stats\RelativeCharacteristic.cs" />
+    <Compile Include="Managers\Stats\ResitanceCharacteristic.cs" />
+    <Compile Include="Managers\WorldSaveManager.cs" />
+    <Compile Include="Modules\IModule.cs" />
+    <Compile Include="Modules\ModuleAttribute.cs" />
+    <Compile Include="Modules\ModuleManager.cs" />
+    <Compile Include="Network\IPCClient.cs" />
+    <Compile Include="Network\IPCManager.cs" />
+    <Compile Include="Network\WorldClient.cs" />
+    <Compile Include="Network\WorldServer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Records\Accounts\WorldAccountRecord.cs" />
+    <Compile Include="Records\Bidshops\BidshopRecord.cs" />
+    <Compile Include="Records\Breeds\BreedRecord.cs" />
+    <Compile Include="Records\Characters\CharacterJob.cs" />
+    <Compile Include="Records\Characters\CharacterRecord.cs" />
+    <Compile Include="Records\Characters\EmoteRecord.cs" />
+    <Compile Include="Records\Characters\ExperienceRecord.cs" />
+    <Compile Include="Records\Breeds\HeadRecord.cs" />
+    <Compile Include="Managers\Shortcuts\GeneralShortcutBar.cs" />
+    <Compile Include="Managers\Shortcuts\ShortcutBar.cs" />
+    <Compile Include="Records\Characters\MerchantRecord.cs" />
+    <Compile Include="Records\Database.cs" />
+    <Compile Include="Records\Effects\EffectRecord.cs" />
+    <Compile Include="Records\Items\BankItemRecord.cs" />
+    <Compile Include="Records\Items\BidShopItemRecord.cs" />
+    <Compile Include="Records\Items\ItemSetRecord.cs" />
+    <Compile Include="Records\Items\MerchantItemRecord.cs" />
+    <Compile Include="Records\Items\WeaponRecord.cs" />
+    <Compile Include="Records\Maps\DungeonRecord.cs" />
+    <Compile Include="Records\Maps\InteractiveSkillRecord.cs" />
+    <Compile Include="Records\Maps\SkillRecord.cs" />
+    <Compile Include="Records\Monsters\MonsterRecord.cs" />
+    <Compile Include="Records\Monsters\MonsterSpawnRecord.cs" />
+    <Compile Include="Records\Npcs\NpcActionRecord.cs" />
+    <Compile Include="Records\Npcs\NpcReplyRecord.cs" />
+    <Compile Include="Records\Spells\SpellCategoryEnum.cs" />
+    <Compile Include="Records\Spells\SpellStateRecord.cs" />
+    <Compile Include="Records\Tinsel\OrnamentRecord.cs" />
+    <Compile Include="Records\Items\AbstractItem.cs" />
+    <Compile Include="Records\Items\CharacterItemRecord.cs" />
+    <Compile Include="Records\Items\ItemRecord.cs" />
+    <Compile Include="Records\Items\LivingObjectRecord.cs" />
+    <Compile Include="Records\Maps\MapPositionRecord.cs" />
+    <Compile Include="Records\Maps\MapRecord.cs" />
+    <Compile Include="Records\Maps\MapScrollActionRecord.cs" />
+    <Compile Include="Records\Npcs\NpcRecord.cs" />
+    <Compile Include="Records\Npcs\NpcSpawnRecord.cs" />
+    <Compile Include="Records\Spells\SpellLevelRecord.cs" />
+    <Compile Include="Records\Spells\SpellRecord.cs" />
+    <Compile Include="Records\Maps\SubareaRecord.cs" />
+    <Compile Include="Records\Spells\SpellVariantRecord.cs" />
+    <Compile Include="Records\Tinsel\TitleRecord.cs" />
+    <Compile Include="Web\Controllers\GiftsController.cs" />
+    <Compile Include="Web\Controllers\StatsController.cs" />
+    <Compile Include="Web\Startup.cs" />
+    <Compile Include="Web\WebApi.cs" />
+    <Compile Include="WorldCommands.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Giny.Core\Giny.Core.csproj">
+      <Project>{8AB2DC30-B9CC-4D45-8104-71B384BB5F57}</Project>
+      <Name>Giny.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Giny.IO\Giny.IO.csproj">
+      <Project>{125FA15D-C012-4AF3-8A65-F6A104A67FC1}</Project>
+      <Name>Giny.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Giny.ORM\Giny.ORM.csproj">
+      <Project>{C6182B67-9D36-4E64-8BA9-9E186F818667}</Project>
+      <Name>Giny.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Giny.Protocol\Giny.Protocol.csproj">
+      <Project>{1EEA4E95-4EEF-444E-B261-5CB8AFE90040}</Project>
+      <Name>Giny.Protocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,17 @@
+﻿<#@ template language="C#" debug="true"  #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter name="Converter" type="Giny.ProtocolBuilder.Converters.EnumConverter" #>
+
+<#= Converter.GetImports() #>
+
+namespace <#= Converter.GetNamespace() #>
+{<# Converter.PushIndent(); #>
+    public enum <#= Converter.GetClassName() #>
+    {<# Converter.PushIndent(); #>
+<#= Converter.GetEnumFields() #>
+    }<# Converter.PopIndent(); #>
+}<# Converter.PopIndent(); #>
+

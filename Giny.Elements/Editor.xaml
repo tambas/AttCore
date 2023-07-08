@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Giny.Elements.Editor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Giny.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="1917" Height="1038">
+    <Grid>
+        <WindowsFormsHost Name="host" HorizontalAlignment="Left" Height="813" VerticalAlignment="Top" Width="1536" Panel.ZIndex="-22" Margin="0,10,0,0"/>
+        <Button Content="Center View" HorizontalAlignment="Left" Margin="414,868,0,0" VerticalAlignment="Top" Width="167" Height="54" Click="Button_Click_1"/>
+        <Grid HorizontalAlignment="Left" Height="795" Margin="1562,28,0,0" VerticalAlignment="Top" Width="322">
+            <Button Content="Go" HorizontalAlignment="Left" Margin="252,10,0,0" VerticalAlignment="Top" Width="60" Height="23" Click="Button_Click"/>
+            <TextBox x:Name="targetMapId" HorizontalAlignment="Left" Height="23" Margin="64,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="183"/>
+            <CheckBox x:Name="displayGrid" Content="Display Grid" HorizontalAlignment="Left" Margin="-1146,905,0,-125" VerticalAlignment="Top" Click="displayGrid_Click" />
+            <Label Content="Map Id :" HorizontalAlignment="Left" Margin="6,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="Subarea Id : -1" HorizontalAlignment="Left" Margin="6,41,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <ListBox SelectionChanged="interactives_SelectionChanged" Name="interactives" HorizontalAlignment="Left" Height="145" Margin="10,868,0,0" VerticalAlignment="Top" Width="380"/>
+        <Label  Content="Elements" HorizontalAlignment="Left" Margin="10,837,0,0" VerticalAlignment="Top" Width="380"/>
+    </Grid>
+</UserControl>

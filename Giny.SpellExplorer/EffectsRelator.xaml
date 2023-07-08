@@ -1,0 +1,24 @@
+﻿<Window x:Class="Giny.SpellExplorer.EffectsRelator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Giny.SpellExplorer"
+        mc:Ignorable="d"
+        Title="Effects Relator" Height="454.677" Width="767.256">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="108*"/>
+            <ColumnDefinition Width="145*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="effects" HorizontalAlignment="Left" Height="299" Margin="10,47,0,0" VerticalAlignment="Top" Width="286"/>
+        <ListBox Name="spells" HorizontalAlignment="Left" Height="336" Margin="310,10,0,0" VerticalAlignment="Top" Width="439" Grid.ColumnSpan="2"/>
+        <ProgressBar Foreground="Goldenrod" Name="progress" HorizontalAlignment="Left" Margin="10,386,0,10" Width="647" Grid.ColumnSpan="2"/>
+        <Label Name="count" Content="Count :" Grid.Column="1" Margin="338,383,0,10" RenderTransformOrigin="0.073,-0.386"/>
+        <Button Content="Explore" Margin="310,351,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="27" Click="ExploreClick"/>
+        <CheckBox Name="unhandleds" Click="UnhandledOnlyClicked" Content="Unhandled only" HorizontalAlignment="Left" Margin="10,358,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.223,0.357" Width="286"/>
+        <Label Content="Effect name :" Margin="10,10,234,0" VerticalAlignment="Top"/>
+        <TextBox TextChanged="search_TextChanged" Name="search" Height="23" Margin="95,13,28,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
